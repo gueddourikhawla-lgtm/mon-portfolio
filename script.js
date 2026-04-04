@@ -1,21 +1,26 @@
-// Gestion du curseur robotique personnalisé
 const cursor = document.getElementById('robot-cursor');
 
-document.addEventListener('mousemove', (e) => {
-    // On met à jour la position du curseur selon la souris
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+// Détection si l'utilisateur est sur mobile/tactile
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-// Optionnel : Animation au survol des liens
-const links = document.querySelectorAll('a, .skill-card, .project-card');
-links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursor.style.filter = 'hue-rotate(90deg)';
+if (!isTouchDevice) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
     });
-    link.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursor.style.filter = 'none';
+
+    const links = document.querySelectorAll('a, .skill-card, .project-card, .btn, .c-btn');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursor.style.filter = 'hue-rotate(90deg) drop-shadow(0 0 10px var(--rose-gold))';
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursor.style.filter = 'none';
+        });
     });
-});
+} else {
+    // Si c'est un mobile, on supprime carrément l'élément du DOM
+    if (cursor) cursor.remove();
+}
