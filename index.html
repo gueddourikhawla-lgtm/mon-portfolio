@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>K.GDR | Robotics & AI Engineering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="robot-cursor"></div>
-    <div class="ambient-background"></div>
-
     <header>
         <div class="logo">K.GDR</div>
         <nav class="nav-links">
             <a href="#home">Accueil</a>
-            <a href="#identity">Profil</a>
             <a href="#skills">Compétences</a>
             <a href="#experience">Expériences</a>
             <a href="#projects">Projets</a>
@@ -26,95 +21,71 @@
     </header>
 
     <section id="home">
-        <h1 class="portfolio-title">PORTFOLIO</h1>
-        <p class="hero-subtitle">Ingénieure en Robotique & IoT</p>
-        <p class="hero-mission">Je ne construis pas seulement des machines ; je leur donne un cerveau.</p>
+        <h1>PORTFOLIO</h1>
+        <p>Ingénieure en Robotique & Objets Connectés (ROC)</p>
         <a href="#projects" class="btn">VOIR MES PROJETS</a>
     </section>
 
-    <section id="identity">
-        <div class="id-text">
-            <div class="id-card">
-                <h2>Qui je suis</h2>
-                <p><strong>GUEDDOURI Khawla</strong>, étudiante ingénieure en Robotique et Objets Connectés à <strong>l'ENIAD Berkane</strong>. Passionnée par la transformation du matériel statique en systèmes intelligents.</p>
-            </div>
-            <div class="id-card">
-                <h2>Ma Discipline</h2>
-                <p>Architecte système : du capteur physique (IoT) jusqu'au traitement complexe par Deep Learning.</p>
-            </div>
-        </div>
-    </section>
-
     <section id="skills">
-        <h2 class="section-header">Intelligence Technique</h2>
+        <h2>Intelligence Technique</h2>
         <div class="skills-grid">
             <div class="skill-card">
                 <i class="fas fa-microchip"></i>
                 <h4>Systèmes Embarqués</h4>
-                <p>Maîtrise : Arduino, ESP32, Raspberry Pi. Expert en réseaux de capteurs.</p>
+                <p>Arduino, ESP32, Raspberry Pi, Capteurs.</p>
             </div>
             <div class="skill-card">
                 <i class="fas fa-brain"></i>
                 <h4>IA & Robotique</h4>
-                <p>Deep Learning, ROS 2, Vision par ordinateur (OpenCV).</p>
+                <p>Deep Learning, ROS 2, OpenCV.</p>
             </div>
             <div class="skill-card">
                 <i class="fas fa-code"></i>
                 <h4>Développement</h4>
-                <p>Python, C++, Flutter, Firebase, LaTeX.</p>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-users-cog"></i>
-                <h4>Leadership</h4>
-                <p>Présidente du Club RIOT. Gestion d'équipe et stratégie de projet.</p>
+                <p>Python, C++, Flutter, LaTeX.</p>
             </div>
         </div>
     </section>
 
     <section id="experience">
-        <h2 class="section-header">Expériences Professionnelles</h2>
+        <h2>Expériences</h2>
         <div class="timeline">
             <div class="step">
-                <h3>Stage Technique - Plan de Défense Réseau</h3>
-                <p><strong>ONEE-BE, Oujda</strong> | Mai - Juillet 2024</p>
-                <p>Analyse de l'architecture DTO/XO et développement de protocoles de défense. Réduction de 30% de la surface d'attaque simulée.</p>
+                <h3>Stage - ONEE-BE</h3>
+                <p>Plan de défense réseau & Analyse d'architecture.</p>
             </div>
             <div class="step">
-                <h3>Stage d'Initiation - Amélioration de processus</h3>
-                <p><strong>FASEG, Oujda</strong> | Juillet 2023</p>
-                <p>Audit des workflows de fichiers d'autorisation, réduction de 20% du temps de traitement global.</p>
+                <h3>Stage - FASEG</h3>
+                <p>Amélioration des processus industriels.</p>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2 class="section-header">Projets Réalisés</h2>
-        <div class="projects-container">
-            <div class="project-card">
+        <h2>Projets Techniques</h2>
+        <div class="projects-grid">
+            <article class="project-card">
                 <h3>Drowsiness Detection AI</h3>
-                <p>Système de détection de somnolence conducteur en temps réel (OpenCV/Dlib).</p>
-            </div>
-            <div class="project-card">
+                <p>Sécurité routière par Computer Vision.</p>
+                <span class="tech-tag">Python</span> <span class="tech-tag">OpenCV</span>
+            </article>
+            <article class="project-card">
                 <h3>RFID Security System</h3>
-                <p>Module d'authentification sécurisé (ESP32) avec journalisation complète.</p>
-            </div>
-            <div class="project-card">
+                <p>Module d'accès sécurisé ESP32.</p>
+                <span class="tech-tag">ESP32</span> <span class="tech-tag">Arduino</span>
+            </article>
+            <article class="project-card">
                 <h3>IoT Gas Detection</h3>
-                <p>Monitoring haute précision avec alertes immédiates (MQTT/Wi-Fi).</p>
-            </div>
+                <p>Monitoring haute précision.</p>
+                <span class="tech-tag">IoT</span> <span class="tech-tag">Wi-Fi</span>
+            </article>
         </div>
     </section>
 
     <section id="contact">
-        <h2 class="contact-phrase">CONSTRUISONS LE FUTUR CONNECTÉ</h2>
-        <div class="contact-btns">
-            <a href="mailto:gueddourikhawla@gmail.com" class="c-btn">EMAIL</a>
-            <a href="https://www.linkedin.com/in/khawla-gueddouri-365893252/" target="_blank" class="c-btn">LINKEDIN</a>
-        </div>
+        <h2>Me contacter</h2>
+        <a href="mailto:gueddourikhawla@gmail.com" class="c-btn">Envoyer un Email</a>
     </section>
 
-    <footer>✦ K.GUEDDOURI // INGÉNIERIE ROC // CLASSE DE 2026 ✦</footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
